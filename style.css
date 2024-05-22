@@ -14,7 +14,6 @@ main {
   border: 1px solid white;
   border-radius: 10px;
   filter: drop-shadow(0 0 0.5rem rgb(157, 155, 155));
-  perspective: 1000px;
 }
 
 .flip-box-inner {
@@ -40,21 +39,37 @@ main {
 }
 
 .flip-box-front {
-  background-color: #9dc6dc;
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
   border: 2px solid white;
   border-radius: 10px;
   color: black;
 }
 
 .flip-box-back {
-  background-color: white;
-  border: 2px solid white;
+  background-color: #c6c5c61a;
+  border: 1px solid white;
   border-radius: 10px;
   color: black;
   transform: rotateY(180deg);
 }
+
+hr {
+  width: 80%;
+  border: 0.5px solid lightgray;
+}
 .flip-box-back img {
-  margin-top: 50px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  width: 120px;
+  height: 120px;
 }
 
 .flip-box-front img {
